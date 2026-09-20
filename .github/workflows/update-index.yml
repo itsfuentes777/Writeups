@@ -1,0 +1,27 @@
+# Optional: rebuilds posts/index.json whenever you push or edit a post,
+# so you can add writeups from the GitHub web editor without running Python.
+name: Update post index
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "posts/*.md"
+      - "build.py"
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild index
+        run: python3 build.py
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts/index.json
+          git diff --cached --quiet || (git commit -m "Update post index" && git push)

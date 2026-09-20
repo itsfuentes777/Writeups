@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "2026-09-20-sample-sql-injection-login-bypass",
+    "file": "2026-09-20-sample-sql-injection-login-bypass.md",
+    "title": "Sample: SQL injection login bypass",
+    "date": "2026-09-20",
+    "platform": "TryHackMe",
+    "category": "web",
+    "difficulty": "easy",
+    "points": "",
+    "tags": [
+      "sqli",
+      "authentication",
+      "burp"
+    ],
+    "summary": "A demo post showing every feature of this site. Delete it once you have your own writeups.",
+    "minutes": 1
+  },
+  {
+    "slug": "2026-09-14-sample-xor-known-plaintext",
+    "file": "2026-09-14-sample-xor-known-plaintext.md",
+    "title": "Sample: XOR with a known plaintext",
+    "date": "2026-09-14",
+    "platform": "picoCTF",
+    "category": "crypto",
+    "difficulty": "medium",
+    "points": "100",
+    "tags": [
+      "xor",
+      "python",
+      "known-plaintext"
+    ],
+    "summary": "A single-byte-key XOR ciphertext, where the flag format gives away the key. This is a second sample so the filters have something to filter.",
+    "minutes": 1
+  }
+]

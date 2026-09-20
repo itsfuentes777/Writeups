@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CTF Writeups</title>
+  <meta name="description" content="CTF and lab writeups.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9A%A9%3C/text%3E%3C/svg%3E">
+  <script>
+    // Set the theme before first paint so there is no flash.
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#app">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="site-name" id="site-name" href="#/">Writeups</a>
+      <nav class="site-nav" aria-label="Site">
+        <span id="site-links"></span>
+        <button type="button" class="theme-toggle" id="theme-toggle">Light</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="app" tabindex="-1">
+    <noscript><p class="notice">This site loads its writeups with JavaScript. Enable it to read them.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap" id="site-footer"></div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <img alt="">
+  </div>
+
+  <script src="assets/vendor/marked.umd.js"></script>
+  <script src="assets/vendor/purify.min.js"></script>
+  <script src="assets/vendor/highlight.bundle.js"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
